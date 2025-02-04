@@ -40,12 +40,12 @@ end
 endcase
 
 if(ExpectedOut != Out_DUT)begin
-$display("ERROR AT OPERATION( %d ) : A=%d B=%d ExpectedOut=%d",Sel_TB,A_TB,B_TB,ExpectedOut);
+$display("ERROR AT OPERATION( %d ) : A_TB=%d B_TB=%d ExpectedOut=%d",Sel_TB,A_TB,B_TB,ExpectedOut);
 $stop;
 end
 
 else begin
-$display("PASSED OPERATION( %d ) : A=%d B=%d ExpectedOut=%d",Sel_TB,A_TB,B_TB,ExpectedOut);
+$display("PASSED OPERATION( %d ) : A_TB=%d B_TB=%d ExpectedOut=%d",Sel_TB,A_TB,B_TB,ExpectedOut);
 end
 
 end
