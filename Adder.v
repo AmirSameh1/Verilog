@@ -1,4 +1,4 @@
-module FourBitAdder(
+module Adder(
 input[3:0] A ,B,
 input Cin,
 output [4:0] Sum);
