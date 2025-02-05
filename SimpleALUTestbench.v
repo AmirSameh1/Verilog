@@ -20,24 +20,12 @@ for(j=0; j<4; j=j+1)begin
 Sel_TB=j;
 
 case(Sel_TB)
-
-'b00:begin
-ExpectedOut=A_TB+B_TB;
-end
-
-'b01:begin
-ExpectedOut=A_TB&B_TB;
-end
-
-'b10:begin
-ExpectedOut=A_TB*B_TB;
-end
-
-'b11:begin
-ExpectedOut=A_TB+1;
-end
-
+'b00: ExpectedOut=A_TB+B_TB;
+'b01: ExpectedOut=A_TB&B_TB;
+'b10: ExpectedOut=A_TB*B_TB;
+'b11: ExpectedOut=A_TB+1;
 endcase
+
 
 if(ExpectedOut != Out_DUT)begin
 $display("ERROR AT OPERATION( %d ) : A_TB=%d B_TB=%d ExpectedOut=%d",Sel_TB,A_TB,B_TB,ExpectedOut);
