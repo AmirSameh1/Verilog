@@ -6,24 +6,12 @@ reg [1:0] Sel;
 always @(*)begin
 
 case(Sel)
-
-'b00:begin
- Out = A+B;
-end
-
-'b01:begin
- Out = A&B;
-end
-
-'b10:begin
- Out = A*B;
-end
-
-'b11:begin
- Out = A+1;
-end
-
+'b00: Out = A+B;
+'b01: Out = A&B;
+'b10: Out = A*B;
+'b11: Out = A+1;
 endcase
+
 
 end
 
